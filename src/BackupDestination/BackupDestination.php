@@ -25,8 +25,8 @@ class BackupDestination
         $this->disk = $disk;
 
         $this->diskName = $diskName;
-
-        $this->backupName = (string)preg_replace('/[^a-zA-Z0-9.]/', '-', $backupName);
+        
+        $this->backupName = (string)preg_replace('/[^a-zA-Z0-9.-_]/', '-', $backupName);
     }
 
     public function disk(): Filesystem
